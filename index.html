@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>iOS calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 calculator" ng-app="calculator" ng-controller="calculatorCtrl">
+                <div class="col-md-12 display">
+                    <p ng-bind="output"></p>
+                </div>
+                <div class="col-md-12 buttons">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="button button-light-grey" ng-click="clear()">AC</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-light-grey" ng-click="abs()">+/-</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-light-grey">%</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-orange" ng-click="divide()">/</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('7')">7</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('8')">8</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('9')">9</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-orange" ng-click="multiply()">X</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('4')">4</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('5')">5</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('6')">6</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-orange" ng-click="subtract()">-</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('1')">1</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('2')">2</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey" ng-click="updateOutput('3')">3</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-orange" ng-click="add()">+</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="button zero button-dark-grey" ng-click="updateOutput('0')">0</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-dark-grey">,</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="button button-orange" ng-click="calculate()">=</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+
+</html>
